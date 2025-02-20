@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small E-commerce Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><span style="color: blueviolet;">My</span>Shop</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">Categories</a>
+                        <ul class="dropdown-menu" style="background-color:lightgrey;">
+                            <li><a class="dropdown-item" href="#">Ladies Top</a></li>
+                            <li><a class="dropdown-item" href="#">Hand Bags</a></li>
+                            <li><a class="dropdown-item" href="#">Makeup Product</a></li>
+                            <li><a class="dropdown-item" href="#">Skin Care Product</a></li>
+                            <li><a class="dropdown-item" href="#">Ladies Sandles</a></li>
+                            <li><a class="dropdown-item" href="">Jewllery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>&nbsp;&nbsp;
+                <div class="cart" onclick="addToCart()">
+                    <span class="cart-icon">🛒<span class="cart-count" id="cart-count">0</span></span>
+                
+                  
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="hero-section text-center text-white d-flex align-items-center justify-content-center" style="background: url('Img/finalbg.jpg') no-repeat center center/cover; height: 70vh;">
+        <div>
+            <h1 style="color: black;margin-bottom: 0px;margin-left:150px;color:white;">Shop Smart, Save More!</h1><br><p style="margin-left:150px; ">Our simple yet powerful ecommerce solution allows users of all abilities<br> to operate a successful online store - for free.</p>
+            <a href="#" class="btn btn-primary" style="background-color: blueviolet;border: none;width: 170px;margin-left: 150px;">Shop Now</a>
+        </div>
+    </header>
+    
+    <!-- Product Grid -->
+    <section class="container py-5">
+        <h2 class="text-center mb-4"style="font-weight: bold;" >Collection of Our Products</h2>
+        <div class="row">
+            <!-- Repeat this product card for 6 products -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Img/clothes.jpg" class="card-img-top" alt="Product" height="250" >
+                    <div class="card-body text-center">
+                        <h5 class="card-title">LADIES TOP</h5>
+                        <p class="card-text">Price:5.211$</p>
+                        <button class="btn btn-success">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Img/hand bag.jpg" class="card-img-top" alt="Product" height="250" >
+                    <div class="card-body text-center">
+                        <h5 class="card-title">HAND BAGS</h5>
+                        <p class="card-text">Price:$99.99</p>
+                        <button class="btn btn-success">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Img/makeup.webp" class="card-img-top" alt="Product" height="250" >
+                    <div class="card-body text-center">
+                        <h5 class="card-title" >MAKEUP PRODUCT</h5>
+                        <p class="card-text">Price:5.234$</p>
+                        <button class="btn btn-success">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Img/jewllery.jpg" class="card-img-top" alt="Product" height="250">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">JEWLLERY</h5>
+                        <p class="card-text">Price:2.333$</p>
+                        <button class="btn btn-success">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Img/skin care.jpeg" class="card-img-top" alt="Product" height="250" >
+                    <div class="card-body text-center">
+                        <h5 class="card-title">SKIN CARE PRODUCT</h5>
+                        <p class="card-text">Price:6.234$</p>
+                        <button class="btn btn-success">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Img/sandles.webp" class="card-img-top" alt="Product" height="250">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">LADIES SANDLES</h5>
+                        <p class="card-text">Price:5.774$</p>
+                        <button class="btn btn-success">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+   
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4" style="font-weight: bold;">What Our Customers Say</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="review-card">
+                    <img src="Img/c1.jpg" alt="Customer 1" class="profile-img">
+                    <h5 style="font-weight: bold; color: blueviolet; ">Marjana</h5>
+                    <p>"Amazing product quality! Very satisfied with my purchase. Highly recommended!"</p>
+
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5">&#9733;</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">&#9733;</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">&#9733;</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">&#9733;</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">&#9733;</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="review-card">
+                    <img src="Img/c2.jpg" alt="Customer 2" class="profile-img">
+                    <h5 style="font-weight: bold; color: blueviolet;">Jane Smith</h5>
+                    <p>"Great experience! The product exceeded my expectations. Fast delivery too!"</p>
+
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5">&#9733;</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">&#9733;</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">&#9733;</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">&#9733;</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">&#9733;</label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="review-card">
+                    <img src="Img/c3.jpg" alt="Customer 3" class="profile-img">
+                    <h5 style="font-weight: bold; color: blueviolet;">Emily Johnson</h5>
+                    <p>"Superb quality and excellent customer service. Will definitely buy again!"</p>
+
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5" style="color: lightgray;">&#9733;</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">&#9733;</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">&#9733;</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">&#9733;</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">&#9733;</label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Newsletter Signup -->
+    <div class="containernewsletter d-flex justify-content-center align-items-center vh-80" style="height:400px; margin-bottom: 100px;">
+        <form class="newsletter-form p-4">
+            <h4 class="text-center mb-3" style="color: white; font-weight: bold;">Subscribe to Our Newsletter</h4>
+          
+            <div class="mb-3">
+                <label for="name" class="form-label" style="color:blueviolet;font-weight:bold;">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label"style="color:blueviolet; font-weight:bold;" >Email</label>
+
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <button type="submit" class="btn btn-custom " style="background-color: blueviolet; color: white; width: 170px;">Subscribe</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center text-lg-start">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 style="color: blueviolet;">About Us</h5>
+                    <p>We are a leading eCommerce store providing the best products at affordable prices.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 style="color: blueviolet;">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4 text-center">
+                    <h5 style="color: blueviolet;">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color:blueviolet;">
+            &copy; 2025 Your Store. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+        function addToCart() {
+            cartCount++;
+            document.getElementById('cart-count').textContent = cartCount;
+        }
+    </script>
+</body>
+</html>
